@@ -1,0 +1,10 @@
+if(spForActiveActivityDetect.getBoolean( "active", false) == false) {
+                    
+                    Intent cabinetManagerAct = new Intent(this, EmployeeCabinetActivity.class );
+                    finish();
+                    startActivity(cabinetManagerAct );
+
+                }else {
+
+               //...
+              }

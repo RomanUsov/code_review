@@ -1,0 +1,9 @@
+if (x_sum_first_row == 3 || x_sum_second_row == 3 || x_sum_third_row == 3 ||
+            x_sum_first_column == 3 || x_sum_second_column == 3 || x_sum_third_column == 3 ||
+            x_sumDiagonalLR == 3 || x_sumDiagonalRL == 3 ||
+            o_sum_first_row == 3 || o_sum_second_row == 3 || o_sum_third_row == 3 ||
+            o_sum_first_column == 3 || o_sum_second_column == 3 || o_sum_third_column == 3 ||
+            o_sumDiagonalLR == 3 || o_sumDiagonalRL == 3)
+            someoneWon = true;
+
+        return someoneWon;

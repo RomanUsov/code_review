@@ -1,9 +1,23 @@
-if (x_sum_first_row == 3 || x_sum_second_row == 3 || x_sum_third_row == 3 ||
-            x_sum_first_column == 3 || x_sum_second_column == 3 || x_sum_third_column == 3 ||
-            x_sumDiagonalLR == 3 || x_sumDiagonalRL == 3 ||
-            o_sum_first_row == 3 || o_sum_second_row == 3 || o_sum_third_row == 3 ||
-            o_sum_first_column == 3 || o_sum_second_column == 3 || o_sum_third_column == 3 ||
-            o_sumDiagonalLR == 3 || o_sumDiagonalRL == 3)
-            someoneWon = true;
+if (searchBox.isFocused()) {
+			addressBookPopupMenu.enableItem(0, false);//view
+			addressBookPopupMenu.enableItem(1, true);//search
+			addressBookPopupMenu.enableItem(2, true);//add contact
+			addressBookPopupMenu.enableItem(3, false);//edit contact
+			addressBookPopupMenu.enableItem(4, false);//delete contact
+			addressBookPopupMenu.enableItem(5, false);            
+		}
+		else {
+			addressBookPopupMenu.enableItem(0,true);
+			addressBookPopupMenu.enableItem(1,false);
+			addressBookPopupMenu.enableItem(2,true);
+			addressBookPopupMenu.enableItem(3,true);
+			addressBookPopupMenu.enableItem(4,true);
+			addressBookPopupMenu.enableItem(5, true);           
+		}
 
-        return someoneWon;
+		if(isSocialNWportal()) {
+			addressBookPopupMenu.enableItem(2, false);//add contact
+			addressBookPopupMenu.enableItem(3, false);//edit contact
+			addressBookPopupMenu.enableItem(4, false);//delete contact
+		}
+
